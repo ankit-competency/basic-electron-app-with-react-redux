@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width,user-scalable=no">
+    <title>Menerva-Notes</title>
+    <!-- FontAwesome core CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="vendor/bootstrap/css/simple-sidebar.css" rel="stylesheet">
+</head>
+
+<body>
+
+
+<div id="root"></div>
+
+
+<script>
+
+    {
+        const port = process.env.PORT || 8080;
+
+        const vendor = document.createElement('script');
+        vendor.src = (process.env.NODE_ENV === 'production') ? 'dist/vendor.bundle.js' : `http://localhost:${port}/dist/vendor.bundle.js`;
+        document.write(vendor.outerHTML);
+
+        const bundle = document.createElement('script');
+        bundle.src = (process.env.NODE_ENV === 'production') ? 'dist/bundle.js' : `http://localhost:${port}/dist/bundle.js`;
+        document.write(bundle.outerHTML);
+    }
+</script>
+
+</body>
+
+</html>
+
